@@ -1,0 +1,69 @@
+@media only screen and (max-width: 600px) {
+    
+    .container{
+        background-color: #d1d1d1;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 30px auto 0;
+    }
+    
+    .inputTask{
+        border: none;
+        border-radius: 10px;
+        width: 250px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 17px;
+    }
+    
+    .butaoTask{
+        border: none;
+        border-radius: 5px;
+        height: 39px;
+        background-color: #003329;
+        color: #ffffff;
+        padding: 0 15px;
+        float: right;
+        cursor: pointer;
+    }
+    .butaoTask:hover{
+        opacity: 0.8;
+    }
+    .butaoTask:active{
+        opacity: 0.6;
+    }
+    
+    .list-tasks{
+        width: 100%;
+        list-style: none;
+        margin-top: 20px;
+    }
+    
+    .task{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        
+    
+        padding: 0 15px;
+        margin-bottom: 10px;
+        border-radius: 10px ;
+        background-color: #f2f2f2;
+        box-shadow: 1px 4px 10px rgb(0, 0, 0, 0.2);
+    }
+    img{
+        height: 25px;
+    }
+    
+    .feito{
+        background-color:#8fac55 ;
+        text-decoration: line-through;
+    }
+    
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+}
