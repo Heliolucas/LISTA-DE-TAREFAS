@@ -1,57 +1,59 @@
-const input = document.querySelector('.inputTask')
-const butao = document.querySelector('.butaoTask')
-const listaCompleta = document.querySelector('.list-tasks')
+const input = document.querySelector(".inputTask");
+const butao = document.querySelector(".butaoTask");
+const listaCompleta = document.querySelector(".list-tasks");
 
-let minhaListaDeItens = []
+let minhaListaDeItens = [];
 
-function adicionarNovaTarefa(){
+function adicionarNovaTarefa() {
+  if (input.value !== "") {
     minhaListaDeItens.push({
-        tarefa: input.value,
-        concluida: false
-    })
+      tarefa: input.value,
+      concluida: false,
+    });
 
-    input.value = ''
+    input.value = "";
 
-    mostrarTarefas()
+    mostrarTarefas();
+  } else return console.log("erro");
 }
 
-function mostrarTarefas(){
-    let novaLi= ''
+function mostrarTarefas() {
+  let novaLi = "";
 
-    minhaListaDeItens.forEach( (item, index) => {
-        novaLi = novaLi + `
+  minhaListaDeItens.forEach((item, index) => {
+    novaLi =
+      novaLi +
+      `
         <li class="task ${item.concluida && "feito"}">
             <img src="img/checked.png" alt="concluido texto" onclick="concluirItem(${index})">
             <p>${item.tarefa}</p>
             <img src="img/trash.png" alt="apagar text" onclick="deletarItem(${index})">
         </li>
-        `
-    })
+        `;
+  });
 
-    listaCompleta.innerHTML = `${novaLi}`
+  listaCompleta.innerHTML = `${novaLi}`;
 
-    localStorage.setItem('lista', JSON.stringify(minhaListaDeItens))
-
+  localStorage.setItem("lista", JSON.stringify(minhaListaDeItens));
 }
 
-function concluirItem(index){
-    minhaListaDeItens[index].concluida = !minhaListaDeItens[index].concluida
-    mostrarTarefas()
+function concluirItem(index) {
+  minhaListaDeItens[index].concluida = !minhaListaDeItens[index].concluida;
+  mostrarTarefas();
 }
 
-function deletarItem(index){
-    // splice(quem eu quero deletar, e quantos itens a partir de la)
-    minhaListaDeItens.splice(index, 1)
-    console.log(`deletou ${index}`)
+function deletarItem(index) {
+  // splice(quem eu quero deletar, e quantos itens a partir de la)
+  minhaListaDeItens.splice(index, 1);
+  console.log(`deletou ${index}`);
 
-    mostrarTarefas()
+  mostrarTarefas();
 }
 
-function recarregarTela(){
-    const tarefasCarregar = localStorage.getItem('lista')
-    minhaListaDeItens = JSON.parse(tarefasCarregar)
+function recarregarTela() {
+  const tarefasCarregar = localStorage.getItem("lista");
+  minhaListaDeItens = JSON.parse(tarefasCarregar);
 }
 
-recarregarTela()
-butao.addEventListener('click',adicionarNovaTarefa )
-
+recarregarTela();
+butao.addEventListener("click", adicionarNovaTarefa);

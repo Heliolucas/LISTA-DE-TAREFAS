@@ -1,88 +1,85 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    outline: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  outline: none;
 }
 
-body{
-    background: url('img/3259954.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    
+body {
+  background: url("img/3259954.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.container{
-    background-color: #d1d1d1;
-    width: 550px;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 100px auto 0;
+.container {
+  background-color: #d1d1d1;
+  width: 550px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 100px auto 0;
 }
 
-.inputTask{
-    border: none;
-    border-radius: 10px;
-    width: 400px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 17px;
-    text-align: center;
+.inputTask {
+  border: none;
+  border-radius: 10px;
+  width: 400px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 17px;
 }
 
-.butaoTask{
-    border: none;
-    border-radius: 5px;
-    height: 39px;
-    background-color: #003329;
-    color: #ffffff;
-    padding: 0 15px;
-    float: right;
-    cursor: pointer;
+.butaoTask {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #003329;
+  color: #ffffff;
+  padding: 0 15px;
+  float: right;
+  cursor: pointer;
 }
-.butaoTask:hover{
-    opacity: 0.8;
+.butaoTask:hover {
+  opacity: 0.8;
 }
-.butaoTask:active{
-    opacity: 0.6;
-}
-
-.list-tasks{
-    width: 100%;
-    list-style: none;
-    margin-top: 10px;
+.butaoTask:active {
+  opacity: 0.6;
 }
 
-.task{
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: space-between;
-    
-
-    padding: 0 15px;
-    margin-bottom: 10px;
-    border-radius: 10px ;
-    background-color: #f2f2f2;
-    box-shadow: 1px 4px 10px rgb(0, 0, 0, 0.2);
-}
-img{
-    height: 25px;
-    opacity: 0.2;
-}
-.task:hover img{
-    opacity: 1;
-    transition: 0.7s ease-in-out;
+.list-tasks {
+  width: 100%;
+  list-style: none;
+  margin-top: 10px;
 }
 
-.feito{
-    background-color:#8fac55 ;
-    text-decoration: line-through;
+.task {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 1px 4px 10px rgb(0, 0, 0, 0.2);
+}
+img {
+  height: 25px;
+  opacity: 0.2;
+}
+.task:hover img {
+  opacity: 1;
+  transition: 0.7s ease-in-out;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    font-size: .9rem;
+.feito {
+  background-color: #8fac55;
+  text-decoration: line-through;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
 }
